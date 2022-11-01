@@ -102,12 +102,54 @@ console.log(fibonacci(6 )+" fib")
 //staircase problem
 function noOfWays(n) {
     if(n == 1 || n == 0)
-        return 1;
+        return n;
 
     if(n == 2)
         return 2;
 
     return noOfWays(n - 1) + noOfWays(n - 2) ;
 }
- console.log(noOfWays(4)+ " staircase" )
+ console.log(noOfWays(3)+ " staircase" )
+var check  = new Set();
+ const removeAdjcentChar = (s) =>{
+   
+    let i =0;
+    let j =0
+    while(i<s.length){
+        check.add(s[i])
+       i++
+    }
+
+    if(check.size === s.length){
+        return s;
+    }
+    
+    check.clear();
+        i =0
+        while(j<s.length){
+            if(s[i]===s[j]){
+                s.splice(i,j)
+            }
+            i++ ;
+            j++;
+        }
+    
+    
+    return removeAdjcentChar(s)
+ }
+
+ //console.log(removeAdjcentChar("geeksforgeeks"))
+
+
+function  printNos(N){
+        
+    if(N>0){
+        printNos(N-1)
+        console.log(N)
+    }
+    return
+}
+
+
+console.log(printNos(10))
 
