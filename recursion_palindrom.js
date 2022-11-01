@@ -11,10 +11,24 @@ function palindrome(word) {
 
 }
 
+
+const palindromeOnceAgain = (name) =>{
+    if(name.length===0 || name.length===1)
+    {
+        return true;
+    }
+
+    if(name[0] !== name[name.length])
+    return false;
+
+    return palindromeOnceAgain(name.slice(1,name.length-1))
+}
+
 console.log(`palindrome("rotor"):${palindrome("rotor")}`);
 console.log(`palindrome("lol"):${palindrome("lol")}`);
 console.log(`palindrome("malayalam"):${palindrome("malayalam")}`);
 console.log(`palindrome(gagan):${palindrome("gagan")}`);
+console.log(`palindrome("peace)'${palindromeOnceAgain("malayalam")}`);
 
 //factorial using recursive method
 function number(n)
@@ -68,6 +82,13 @@ function strev(str)
     return str[str.length-1]+strev(str.substring(0,str.length-1))
 }
 console.log(strev("My name is Khan"))
+const reverseString = (str) =>{
+    if(str.length === 0)return ""
+
+  return str[str.length-1] +reverseString( str.slice(0,str.length-1))
+
+}
+console.log(reverseString("gagan") + " gagan")
 
 function fibonacci(n) {
     if(n <= 1)
@@ -75,7 +96,7 @@ function fibonacci(n) {
 
     return fibonacci(n-1) + fibonacci(n-2);
 }
-console.log(fibonacci(6 ))
+console.log(fibonacci(6 )+" fib")
 
 
 //staircase problem
@@ -86,7 +107,7 @@ function noOfWays(n) {
     if(n == 2)
         return 2;
 
-    return noOfWays(n - 1) + noOfWays(n - 2) + noOfWays( n - 3);
+    return noOfWays(n - 1) + noOfWays(n - 2) ;
 }
- console.log(noOfWays(4) )
+ console.log(noOfWays(4)+ " staircase" )
 
