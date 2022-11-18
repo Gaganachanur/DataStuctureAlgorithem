@@ -1,0 +1,54 @@
+<html>
+<head>
+<style>
+body{
+display:flex;
+justify-content:space-around;
+background-color: black;
+}
+.outerBox {
+  width: 500px;
+  border: 5px solid whitesmoke;
+  height:500px;
+  display: flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-left:200px;
+  margin-top:100px;
+  flex-direction:column;
+}
+.innerBox{
+  border:1px solid black;
+  height: 100px;
+  width:100px;
+  display: flex;
+  justify-content:space-around;
+  align-items:center;
+  background-color:green;
+}
+.innerBox1{
+  align-items:center;
+  background-color:yellow;
+  width:100px;
+  border:1px solid black;
+  height: 100px;
+  display: flex;
+  justify-content:space-around;
+  align-items:center;
+}
+</style>
+</head>
+<body>
+<div class="outerBox">
+<div class="innerBox" onmouseover=box1('peace')>1</div>
+<div class="innerBox1"onmouseover=box1('ultra')>2</div>
+<div class="innerBox"onmouseover=box1('bob')>3</div>
+<div class="innerBox1"onmouseover=box1('anko')>4</div>
+</div>
+
+</body>
+</html>
+<script>
+    const  box1=(a)=> alert(`box 1 ${a}`);
+
+</script>
