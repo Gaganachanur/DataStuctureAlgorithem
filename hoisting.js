@@ -19,26 +19,29 @@ If we want to initialize a variable but it is not declared yet, and it is declar
 Then it will give a reference error and that is called temporal dead zone. 
 In this zone the variable is dead temporary. For example:*/
 
-a = 4;
-//some code|
-//somecode|     temporal dead zone
-//somecode|
-let a;
+// a = 4;
+// //some code|
+// //somecode|     temporal dead zone
+// //somecode|
+// let a;
 
 /*In the above code, the zone between variable initialization and declaration is called Temporal Dead Zone. */
 
-const a = []; //empty array assigned to static variable a 
-const b = []; //empty array assigned to static variable b 
-console.log(a === b); 
-console.log(a == b);
+// const x = []; //empty array assigned to static variable a 
+// const y = []; //empty array assigned to static variable b 
+// console.log(x === y); 
+// console.log(x == y);
 
-/*This is because the memory allocation to both of the empty arrays (a and b) is different. 
+// console.log(1=='1')//true because compares value
+// console.log(1=== '1') //false because compare value and data type also
+
+/*This is because the memory allocation to both of the empty arrays (x and y) is different. 
 In the case of an array JavaScript doesn’t match the values, but it matches the references (memory locations). 
 This is the reason why output is false in both cases. */
 
 
-let x = 10; 
-function a() { let x = 20; b(); } 
-function b() { console.log(x); } 
-a();
+let g = 10; 
+function u() { let g = 20; v(); } 
+function v() { console.log(g); } 
+u();
   
