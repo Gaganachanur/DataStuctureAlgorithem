@@ -18,12 +18,12 @@ This question is also related to the hoisting and scope of variables. It is rela
 If we want to initialize a variable but it is not declared yet, and it is declared in the code below. 
 Then it will give a reference error and that is called temporal dead zone. 
 In this zone the variable is dead temporary. For example:*/
-
-// a = 4;
-// //some code|
-// //somecode|     temporal dead zone
-// //somecode|
-// let a;
+//  r = 4;
+// some code|
+// somecode|     temporal dead zone
+// somecode|
+// let r;
+// console.log(r +'r')
 
 /*In the above code, the zone between variable initialization and declaration is called Temporal Dead Zone. */
 
