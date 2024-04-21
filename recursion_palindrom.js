@@ -109,7 +109,7 @@ function noOfWays(n) {
 
     return noOfWays(n - 1) + noOfWays(n - 2) ;
 }
- console.log(noOfWays(3)+ " staircase" )
+ console.log(noOfWays(4)+ " staircase" )
 var check  = new Set();
  const removeAdjcentChar = (s) =>{
    
